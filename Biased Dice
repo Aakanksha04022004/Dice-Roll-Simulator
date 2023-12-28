@@ -1,0 +1,11 @@
+import random
+
+def biased_dice_roll():
+    faces = [1, 2, 3, 4, 5, 6]
+    weights = [0, 0.1, 0, 0.1, 0.1, 0.7]
+
+    result = random.choices(faces, weights=weights)[0]
+    return result
+
+biased_result = biased_dice_roll()
+print("Biased Dice Roll:", biased_result)
